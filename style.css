@@ -39,7 +39,7 @@ body{
 .card .image{
     width: 50%;
     height: 100%;
-    background-image: url(/images/image-product-desktop.jpg);
+    background-image: url(images/image-product-desktop.jpg);
     background-size: cover;
     border-radius: 10px 0 0 10px;
 
