@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 14px;
+    background-color:var(--Very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px !important;
+}
+
+.card .image{
+    width: 50%;
+    height: 100%;
+    background-image: url(/images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+
+}
+.card .content{
+    width: 50%;
+    height: 100%;
+    padding: 30px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+.card .content h4{
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.card .content h4,
+.card .content p{
+    color: var(--Dark-grayish-blue);
+    font-weight: bold;
+    font-size: 14px;
+}
+.card .content .price{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+.card .content .price h2{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+    color: var(--Dark-cyan);
+}
+.card .content .price del{
+    color: var(--Dark-grayish-blue);
+}
+.card .content button{
+    width: 90%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--Dark-cyan);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--Cream);
+}
+.card .content button img{
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+
+@media (max-width:375px) {
+    .card{
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+        margin: 10px;
+        border-radius: 10px 10px 0 0;
+    }
+    .card .image{
+        width: 100%;
+        height: 40%;
+        border-radius: 10px 10px 0 0;
+        background-image: url(/images/image-product-mobile.jpg);
+        background-size: cover;
+    }
+
+    .card .content{
+        width: 100%;
+        height: 60%;
+        gap: 5px;
+    }
+    .card .content .price{
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    .card .content button{
+        width: 100%;
+    }
+
+
+}
